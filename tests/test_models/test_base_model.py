@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""unit test for BaseModel class"""
 import unittest
 import sys
 sys.path.append('../..')
 from models.base_model import BaseModel
 from unittest.mock import patch, call
+"""unit test for BaseModel class"""
 
 
 class TestBaseModel(unittest.TestCase):
