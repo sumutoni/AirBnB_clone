@@ -12,7 +12,7 @@ We have also taken care of storing and persisting objects to a file (JSON file) 
 
 ## 2. Command Interpreter
 ### How to start it
-To run the command interpreter, simply run the [console.py](https://github.com/ZIHCO/AirBnB_clone/blob/master/console.py) file with command: ./consoly.py.
+To run the command interpreter, simply run the [console.py](https://github.com/ZIHCO/AirBnB_clone/blob/master/console.py) file with command: ./console.py.
 This will start the intepreter and the propmpt "(hbnb)" will appear on the screen. 
 
 ### How to use it
