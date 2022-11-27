@@ -83,8 +83,55 @@ class HBNBCommand(cmd.Cmd):
             print(instances)
          else:
             if arg in HBNBCommand.classes.keys():
-                
+                for k, v in storage.all().items():
+                    if k == arg:
+                        instances.append(v.__Str__())
+            else:
+                print("** class doesn't exist **")
+        print(instances)
 
+    def do_update(self, arg):
+        """Updates an instance based on the class name
+        and id by adding or updating attribute"""
+        if check_class(arg) is True:
+            arg = [i.strip() for i in arg.split()]
+            key = "{}.{}".format(arg[0], arg[1])
+            values = storage.all()
+            if len(arg) == 2:
+                print("** attribute name missing **")
+            elif len(arg) == 3:
+                    print("** value missing **")
+            elif values[key] not in values.values():
+                print("** no instance found **")
+            else:
+                setattr(values[key], arg[2], arg[3])
+                storage.save()
+
+    def do_destroy(self, arg):
+        """Deletes an instance based on the class name and id"""
+        if check_class(arg) is True:
+            arg = [i.strip() for i in arg.split()]
+            elements = storage.all()
+            key = "{}.{}".format(arg[0], arg[1])
+            if key in elements:
+                del storage.all()[key]
+            else:
+                print("** no instance found **")
+
+    def check_class(self, arg):
+        """checks if class exists"""
+        if len(arg) == 0:
+            print("** class name missing **")
+            return False
+        arg = [i.strip() for i in arg.split()]
+        if arg[0] not in HBNBCommand.classes.keys():
+            print("** class doesn't exist **")
+            return False
+        if len(arg) == 1:
+            print("** instance id missing **")
+            return False
+        else:
+            return True
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
