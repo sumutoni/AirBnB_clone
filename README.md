@@ -17,13 +17,13 @@ This will start the intepreter and the propmpt "(hbnb)" will appear on the scree
 
 ### How to use it
 The interpreter has the following commands defined: create, quit, EOF, update, destroy, all, and show. The following is the syntax for each command:
-* (hbnb) create <class name>
+* (hbnb) create (class name)
 * (hbnb) quit
 * (hbnb) EOF
-* (hbnb) update <class name> <id> <attribute name> <attribute value>
-* (hbnb) destroy <class name> <id>
-* (hbnb) all / (hbnb) all <class name>
-* (hbnb) show <class name> <id>
+* (hbnb) update (class name) (id) (attribute name) (attribute value)
+* (hbnb) destroy (class name) (id)
+* (hbnb) all / (hbnb) all (class name)
+* (hbnb) show (class name) (id)
 
 ### Example  
 ![Screenshot 2022-11-28 011122](https://user-images.githubusercontent.com/54947406/204164804-39664a08-c6d2-4df9-9aa5-53fdfd181f1b.jpg)
