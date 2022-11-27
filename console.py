@@ -11,7 +11,7 @@ class HBNBCommand(cmd.Cmd):
     """implementation of the console and its commands"""
 
     prompt = '(hbnb)'
-    classes = {'BaseModel': BaseModel}
+    classes = {'BaseModel': BaseModel, 'User': User}
 
     def do_quit(self, arg):
         """command to quit program"""
@@ -81,7 +81,7 @@ class HBNBCommand(cmd.Cmd):
             for v in storage.all().values():
                 instances.append(v.__str__())
             print(instances)
-         else:
+        else:
             if arg in HBNBCommand.classes.keys():
                 for k, v in storage.all().items():
                     if k == arg:
@@ -100,7 +100,7 @@ class HBNBCommand(cmd.Cmd):
             if len(arg) == 2:
                 print("** attribute name missing **")
             elif len(arg) == 3:
-                    print("** value missing **")
+                print("** value missing **")
             elif values[key] not in values.values():
                 print("** no instance found **")
             else:
@@ -132,6 +132,7 @@ class HBNBCommand(cmd.Cmd):
             return False
         else:
             return True
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

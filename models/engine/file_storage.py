@@ -22,7 +22,7 @@ class FileStorage:
         json_dict = {}
         for k in self.__objects.keys():
             json_dict[k] = self.__objects[k].to_dict()
-        with open(self.__file_path, "w", encoding = "utf-8") as file:
+        with open(self.__file_path, "w", encoding="utf-8") as file:
             json.dump(json_dict, file)
 
     def reload(self):
@@ -31,7 +31,7 @@ class FileStorage:
         If the file doesn’t exist, no exception should be raised)
         """
         try:
-            with open(self.__file_path, "r", encoding = "utf-8") as file:
+            with open(self.__file_path, "r", encoding="utf-8") as file:
                 json_dict = json.load(file)
                 for k in json_dict.keys():
                     self.__objects[k] = BaseModel(**json_dict[k])
