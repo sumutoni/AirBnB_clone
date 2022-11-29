@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """This is unittest for the console module"""
 import sys
-sys.path.append('../')
-from console import HBNBCommand
 import unittest
+from console import HBNBCommand
+sys.path.append('../')
 
 
 class TestConsole(unittest.TestCase):
