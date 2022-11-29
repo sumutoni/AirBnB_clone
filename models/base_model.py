@@ -44,7 +44,8 @@ class BaseModel:
         create = self.created_at.isoformat()
         dictionary.pop("created_at")
         dictionary.pop("updated_at")
-        cls_dict = {"__class__": str(self.__class__.__name__),
+
+        cls_dict = {"__class__": self.__class__.__name__,
                     "updated_at": update, "created_at": create}
         dictionary.update(cls_dict)
         return dictionary
