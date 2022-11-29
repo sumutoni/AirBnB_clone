@@ -21,7 +21,7 @@ class FileStorage:
         """serializes __objects to the JSON file (path: __file_path)"""
         json_dict = {}
         for k in self.__objects.keys():
-            json_dict[k] = self.__objects[k].to_dict()
+            json_dict[k] = self.__objects[k].to_dict().pop('__class__')
         with open(self.__file_path, "w", encoding="utf-8") as file:
             json.dump(json_dict, file)
 
