@@ -29,7 +29,7 @@ class BaseModel:
     def __str__(self):
         """prints representation of instance"""
         return ("[{}] ({}) {}".format(self.__class__.__name__,
-                                    self.id, self.__dict__))
+                                      self.id, self.__dict__))
 
     def save(self):
         """updates attribute updated_at with current datetime"""
@@ -44,7 +44,7 @@ class BaseModel:
         create = self.created_at.isoformat()
         dictionary.pop("created_at")
         dictionary.pop("updated_at")
-        cls_dict = {"__class__": self.__class__, "updated_at": update,
-                    "created_at": create}
+        cls_dict = {"__class__": str(self.__class__.__name__),
+                    "updated_at": update, "created_at": create}
         dictionary.update(cls_dict)
         return dictionary
