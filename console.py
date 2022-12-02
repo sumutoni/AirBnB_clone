@@ -100,7 +100,7 @@ class HBNBCommand(cmd.Cmd):
     def do_update(self, arg):
         """Updates an instance based on the class name
         and id by adding or updating attribute"""
-        if check_class(arg) is True:
+        if type(self).check_class(arg) is True:
             arg = [i.strip() for i in arg.split()]
             key = "{}.{}".format(arg[0], arg[1])
             values = storage.all()
@@ -125,7 +125,8 @@ class HBNBCommand(cmd.Cmd):
             else:
                 print("** no instance found **")
 
-    def check_class(self, arg):
+    @classmethod
+    def check_class(cls, arg):
         """checks if class exists"""
         if len(arg) == 0:
             print("** class name missing **")
