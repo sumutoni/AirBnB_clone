@@ -107,20 +107,20 @@ class HBNBCommand(cmd.Cmd):
                                 value = split_attr[3]
                                 if split_attr[2] not in priv_attr:
                                     attr_dct = storage.all()[key_attr]
-                                    get_dct = attr_dct.to_dict()
-                                    get_dct[key] = value
-                                    updated_cls = eval(split_attr[0])(**get_dct)
+                                    get_dt = attr_dct.to_dict()
+                                    get_dt[key] = value
+                                    updated_cls = eval(split_attr[0])(**get_dt)
                                     storage.all()[key_attr] = updated_cls
                                     storage.save()
                             else:
                                 print("** value missing **")
-                        elif len(split_name_attr) == 2:
+                        elif len(split_attr) == 2:
                             print("** attribute name missing **")
                     else:
                         print("** no instance found **")
                 else:
                     print("** clas doesn't exist **")
-            elif len(split_name_id) == 1:
+            elif len(split_attr) == 1:
                 print("** instance id missing **")
         else:
             print("** class name missing **")
