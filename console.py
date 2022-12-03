@@ -9,6 +9,7 @@ from models.user import User
 from models.amenity import Amenity
 from models.state import State
 
+
 class HBNBCommand(cmd.Cmd):
     """entry point of the command interpreter"""
 
