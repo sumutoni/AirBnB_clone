@@ -5,13 +5,13 @@ import cmd
 from models.base_model import BaseModel
 import json
 from models.__init__ import storage
-
+from models.user import User
 
 class HBNBCommand(cmd.Cmd):
     """entry point of the command interpreter"""
 
     prompt = '(hbnb) '
-    CLASS_NAME = ["BaseModel"]
+    CLASS_NAME = ["BaseModel", "User", "State", "Amenity"]
 
     def do_EOF(self, line):
         """exit the program"""
@@ -119,14 +119,12 @@ class HBNBCommand(cmd.Cmd):
                     else:
                         print("** no instance found **")
                 else:
-                    print("** class doesn't exist **")
+                    print("** classdoesn't exist **")
             elif len(split_attr) == 1:
                 print("** instance id missing **")
         else:
             print("** class name missing **")
 
 
-if __name__ == "__main__":
-    import sys
-
+if __name__ = "__main__":
     HBNBCommand().cmdloop()
