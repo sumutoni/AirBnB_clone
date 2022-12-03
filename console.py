@@ -6,6 +6,8 @@ from models.base_model import BaseModel
 import json
 from models.__init__ import storage
 from models.user import User
+from models.amenity import Amenity
+from models.state import State
 
 class HBNBCommand(cmd.Cmd):
     """entry point of the command interpreter"""
