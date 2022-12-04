@@ -7,7 +7,8 @@
 .filters{
 	height:70px;
 	width:100%;
-	border:solid 1px #DDDDDD 4px;
+	border:solid 1px #DDDDDD;
+	border-radius:4px;
 }
 button{
 	height:48px;
