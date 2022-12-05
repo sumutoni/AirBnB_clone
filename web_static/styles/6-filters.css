@@ -44,3 +44,17 @@ button:hover, button:focus {
 	font-size: 14px;
 	line-height: 0%;
 }
+ul.popover{
+	display:none;
+	width: 25%;
+	border: solid #DDDDDD 1px;
+	border-radius: 4px;
+	color:#FAFAFA;
+	list-style-type: none;
+}
+ul.popover h2{
+	font-size:16px;
+}
+.locations:hover, .amenities:hover{
+	display: block;
+}
