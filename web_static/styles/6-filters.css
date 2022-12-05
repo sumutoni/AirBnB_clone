@@ -44,17 +44,36 @@ button:hover, button:focus {
 	font-size: 14px;
 	line-height: 0%;
 }
-ul.popover{
-	display:none;
-	width: 25%;
+ul{
+	list-style-type: none;
+ 	margin: 0;
+    	padding: 0;
+}
+.popover{
+	width: 15%;
+ 	padding: 15px 0 30px 20px;
 	border: solid #DDDDDD 1px;
 	border-radius: 4px;
 	color:#FAFAFA;
-	list-style-type: none;
+	margin-left:-30px;
+	position:absolute;
+	display:none;
 }
-ul.popover h2{
+.popover ul {
+    padding: 0px 0px 10px 20px;
+    line-height: 25px;
+}
+.popover cities{
+	padding: 20px 0px  30px 40px;
+    	line-height: 30px;
+}
+.popover h2{
 	font-size:16px;
+	padding-bottom: 2px;
 }
-.locations:hover .popover, .amenities:hover .popover{
+.locations:hover .popover{
+	display: block; 
+}
+.amenities:hover .popover{
 	display: block;
 }
