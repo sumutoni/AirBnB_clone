@@ -1,0 +1,22 @@
+.container{
+	max-width: 1000px;
+	margin: 30px auto;
+}
+.places{
+	position:absolute;
+}
+.places h1{
+	font-size:30px;
+}
+.places article{
+	width:390px;
+	padding:20px;
+	margin:20px;
+	border: solid 1px #FF5A5F;
+	border-radius: 4px;
+	display:inline-block;
+}
+.places article h2{
+	font-size: 30px;
+	text-align: center;
+}
